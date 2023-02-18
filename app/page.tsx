@@ -5,15 +5,6 @@ import { useState } from "react";
 
 export default function Home() {
   const [colorChange, setColorchange] = useState(false);
-  console.log(colorChange);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 100) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
-  };
-  window.addEventListener("scroll", changeNavbarColor);
   return (
     <main className="bg-[#0B0B22] h-full relative">
       <div className="w-full h-full absolute backdrop-blur-[87.5px] bg-[#0B0B22]/90"></div>
