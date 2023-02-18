@@ -1,91 +1,74 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+"use client";
+import Button from "@/components/Button";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [colorChange, setColorchange] = useState(false);
+  console.log(colorChange);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 100) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavbarColor);
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <main className="bg-[#0B0B22] h-full relative">
+      <div className="w-full h-full absolute backdrop-blur-[87.5px] bg-[#0B0B22]/90"></div>
+      <svg
+        width="904"
+        height="861"
+        viewBox="0 0 1404 861"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <ellipse
+          cx="392.146"
+          cy="385.089"
+          rx="392.146"
+          ry="385.089"
+          transform="matrix(0.969732 -0.244172 0.253855 0.967242 210.148 63.6521)"
+          fill="#16FCD2"
         />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+        <ellipse
+          cx="392.146"
+          cy="385.089"
+          rx="392.146"
+          ry="385.089"
+          transform="matrix(0.969732 -0.244172 0.253855 0.967242 -327 198.902)"
+          fill="#FCA016"
+        />
+        <ellipse
+          cx="392.146"
+          cy="385.089"
+          rx="392.146"
+          ry="385.089"
+          transform="matrix(0.969732 -0.244172 0.253855 0.967242 532.438 -17.498)"
+          fill="#FC165B"
+        />
+      </svg>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div
+        className={`z-10 fixed top-0 px-10 py-7 w-full flex justify-between text-white transition items-center ${
+          colorChange && "bg-white/5"
+        }`}
+      >
+        <div className="font-bold text-2xl">Collosal</div>
+        <ul className="flex space-x-10">
+          <li>
+            <Link href="/service">Service</Link>
+          </li>
+          <li>
+            <Link href="/work">How We Work</Link>
+          </li>
+          <li>
+            <Link href="/projects">Projects</Link>
+          </li>
+        </ul>
+        <Button>Contact</Button>
       </div>
     </main>
-  )
+  );
 }
