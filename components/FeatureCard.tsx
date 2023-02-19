@@ -51,8 +51,12 @@ export const FeatureCard = ({ icon, title, description }: Props) => {
           stroke-linejoin="round"
         />
       </svg>
-      <p className="font-bold text-lg mt-7">{title}</p>
-      <p className="text-white/60 font-medium text-base mt-2">{description}</p>
+      <div className="mt-7">
+        <p className="font-bold text-lg">{title}</p>
+        <p className="text-white/60 font-medium text-base mt-2">
+          {description}
+        </p>
+      </div>
     </div>
   );
 };
