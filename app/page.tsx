@@ -1,64 +1,43 @@
 "use client";
 import Button from "@/components/Button";
-import Link from "next/link";
-import { useState } from "react";
+import { FeatureCard } from "@/components/FeatureCard";
+import { Hero } from "@/components/Hero";
+import { NavBar } from "@/components/NavBar";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export default function Home() {
-  const [colorChange, setColorchange] = useState(false);
+  const { width } = useWindowSize();
   return (
-    <main className="bg-[#0B0B22] h-full relative">
-      <div className="w-full h-full absolute backdrop-blur-[87.5px] bg-[#0B0B22]/90"></div>
-      <svg
-        width="904"
-        height="861"
-        viewBox="0 0 1404 861"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <ellipse
-          cx="392.146"
-          cy="385.089"
-          rx="392.146"
-          ry="385.089"
-          transform="matrix(0.969732 -0.244172 0.253855 0.967242 210.148 63.6521)"
-          fill="#16FCD2"
-        />
-        <ellipse
-          cx="392.146"
-          cy="385.089"
-          rx="392.146"
-          ry="385.089"
-          transform="matrix(0.969732 -0.244172 0.253855 0.967242 -327 198.902)"
-          fill="#FCA016"
-        />
-        <ellipse
-          cx="392.146"
-          cy="385.089"
-          rx="392.146"
-          ry="385.089"
-          transform="matrix(0.969732 -0.244172 0.253855 0.967242 532.438 -17.498)"
-          fill="#FC165B"
-        />
-      </svg>
-
-      <div
-        className={`z-10 fixed top-0 px-10 py-7 w-full flex justify-between text-white transition items-center ${
-          colorChange && "bg-white/5"
-        }`}
-      >
-        <div className="font-bold text-2xl">Collosal</div>
-        <ul className="flex space-x-10">
-          <li>
-            <Link href="/service">Service</Link>
-          </li>
-          <li>
-            <Link href="/work">How We Work</Link>
-          </li>
-          <li>
-            <Link href="/projects">Projects</Link>
-          </li>
-        </ul>
-        <Button>Contact</Button>
+    <main className="min-h-screen backdrop-blur-[87.5px] bg-[#0B0B22]/90">
+      <div className="container relative px-5 mx-auto sm:px-10 pt-[4%]">
+        <NavBar />
+        <Hero />
+        <div className="flex justify-center space-x-6">
+          <Button size={width > 671 ? "normal" : "sm"} color="primary">
+            Send Quote
+          </Button>
+          <Button
+            size={width > 671 ? "normal" : "sm"}
+            color="white"
+            style="light"
+          >
+            Learn More
+          </Button>
+        </div>
+        <div className="grid-cols-1 sm:grid-cols-3 gap-5 grid mt-[101px]">
+          <FeatureCard
+            title="Design"
+            description="The project interface will be designed first, our favorite tool is Figma."
+          />
+          <FeatureCard
+            title="Design"
+            description="The project interface will be designed first, our favorite tool is Figma."
+          />
+          <FeatureCard
+            title="Design"
+            description="The project interface will be designed first, our favorite tool is Figma."
+          />
+        </div>
       </div>
     </main>
   );
