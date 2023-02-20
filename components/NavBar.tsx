@@ -14,7 +14,7 @@ const NavLink = ({
 export const NavBar = () => {
   return (
     <div
-      className={`z-10 py-[9px] sticky top-0 w-full flex justify-between text-white transition items-center`}
+      className={`z-10 py-[9px] sticky  top-0 w-full flex justify-between text-white transition items-center`}
     >
       <Link
         className="font-bold text-2xl flex items-center space-x-[17.25px]"
