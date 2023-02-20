@@ -9,6 +9,7 @@ import { Logo } from "@/components/Logo";
 import { NavBar } from "@/components/NavBar";
 import { Section } from "@/components/Section";
 import useWindowSize from "@/hooks/useWindowSize";
+import { ProjectCard } from "@/components/ProjectCard";
 
 export default function Home() {
   const { width } = useWindowSize();
@@ -65,6 +66,24 @@ export default function Home() {
         Our team consists of many creative people. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results."
           ilustration={Section2}
         />
+        <div>
+          <div className="sm:w-6/12 w-full sm:mx-auto text-center">
+            <h3 className="text-green font-semibold">PROJECTS</h3>
+            <h1 className="font-bold text-3xl leading-[48px] mt-1 mb-7">
+              We have completed many amazing projects that you will not believe
+            </h1>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-5">
+            <ProjectCard
+              title="The Mobile App Landing Page"
+              description="A landing page for mobile app"
+            />
+            <ProjectCard
+              title="The Desktop App Landing Page"
+              description="A landing page for desktop app"
+            />
+          </div>
+        </div>
         <Footer />
       </div>
     </main>
