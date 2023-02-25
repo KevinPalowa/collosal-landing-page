@@ -6,7 +6,7 @@ type Props = {
 };
 export const FeatureCard = ({ icon, title, description }: Props) => {
   return (
-    <div className="bg-white/5 inline-block px-10 py-8 rounded-[5px]">
+    <div className="inline-block rounded-[5px] bg-white/5 px-10 py-8">
       <svg
         width="50"
         height="50"
@@ -52,8 +52,8 @@ export const FeatureCard = ({ icon, title, description }: Props) => {
         />
       </svg>
       <div className="mt-7">
-        <p className="font-bold text-lg">{title}</p>
-        <p className="text-white/60 font-medium text-base mt-2">
+        <p className="text-lg font-bold">{title}</p>
+        <p className="mt-2 text-base font-medium text-white/60">
           {description}
         </p>
       </div>

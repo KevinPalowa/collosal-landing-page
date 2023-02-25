@@ -14,10 +14,10 @@ const NavLink = ({
 export const NavBar = () => {
   return (
     <div
-      className={`z-10 py-[9px] sticky  top-0 w-full flex justify-between text-white transition items-center`}
+      className={`sticky top-0 z-10  flex w-full items-center justify-between py-[9px] text-white transition`}
     >
       <Link
-        className="font-bold text-2xl flex items-center space-x-[17.25px]"
+        className="flex items-center space-x-[17.25px] text-2xl font-bold"
         href="/"
       >
         <svg
@@ -44,7 +44,7 @@ export const NavBar = () => {
         </svg>
         <span>Collosal</span>
       </Link>
-      <ul className="sm:flex space-x-10 hidden">
+      <ul className="hidden space-x-10 sm:flex">
         <li>
           <NavLink href="#service">Service</NavLink>
         </li>

@@ -2,9 +2,9 @@ import React from "react";
 
 export const Hero = () => {
   return (
-    <div className="text-center sm:w-7/12 w-full mx-auto">
+    <div className="mx-auto w-full text-center sm:w-7/12">
       <h2 className="font-semibold text-green">CLIENT-DEVELOPMENT DRIVEN</h2>
-      <h1 className="font-bold text-4xl mt-4 mb-6">
+      <h1 className="mt-4 mb-6 text-4xl font-bold">
         We Design. We Develop. We Ship. In The Same Day.
       </h1>
       <p className="text-white/60">

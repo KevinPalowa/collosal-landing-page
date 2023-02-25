@@ -15,8 +15,8 @@ import { PricingCard } from "@/components/PricingCard";
 export default function Home() {
   const { width } = useWindowSize();
   return (
-    <main className="min-h-screen backdrop-blur-[87.5px] bg-[#0B0B22]/90 scroll-smooth">
-      <div className="container relative px-5 mx-auto sm:px-10 pt-[4%] pb-16 space-y-40">
+    <main className="min-h-screen scroll-smooth bg-[#0B0B22]/90 backdrop-blur-[87.5px]">
+      <div className="container relative mx-auto space-y-40 px-5 pt-[4%] pb-16 sm:px-10">
         <NavBar />
         <Hero />
         <div className="flex justify-center space-x-6">
@@ -31,7 +31,7 @@ export default function Home() {
             Learn More
           </Button>
         </div>
-        <div className="grid-cols-1 sm:grid-cols-3 gap-5 grid">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
           <FeatureCard
             title="Design"
             description="The project interface will be designed first, our favorite tool is Figma."
@@ -68,13 +68,13 @@ export default function Home() {
           ilustration={Section2}
         />
         <div>
-          <div className="sm:w-6/12 w-full sm:mx-auto text-center">
-            <h3 className="text-green font-semibold">PROJECTS</h3>
-            <h1 className="font-bold text-3xl leading-[48px] mt-1 mb-7">
+          <div className="w-full text-center sm:mx-auto sm:w-6/12">
+            <h3 className="font-semibold text-green">PROJECTS</h3>
+            <h1 className="mt-1 mb-7 text-3xl font-bold leading-[48px]">
               We have completed many amazing projects that you will not believe
             </h1>
           </div>
-          <div className="grid sm:grid-cols-2 gap-5">
+          <div className="grid gap-5 sm:grid-cols-2">
             <ProjectCard
               title="The Mobile App Landing Page"
               description="A landing page for mobile app"
@@ -86,14 +86,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#221048] rounded-[30px] py-[5.625rem] pb-[10.875rem]">
-          <div className="sm:w-6/12 w-full sm:mx-auto text-center">
-            <h3 className="text-green font-semibold">GET STARTED</h3>
-            <h1 className="font-bold text-3xl leading-[48px] mt-1 mb-7">
+        <div className="rounded-[30px] bg-[#221048] py-[5.625rem] pb-[10.875rem]">
+          <div className="w-full text-center sm:mx-auto sm:w-6/12">
+            <h3 className="font-semibold text-green">GET STARTED</h3>
+            <h1 className="mt-1 mb-7 text-3xl font-bold leading-[48px]">
               What do you need? Choose a service that can help you
             </h1>
           </div>
-          <div className="grid sm:grid-cols-3 gap-5">
+          <div className="grid gap-5 sm:grid-cols-3">
             <PricingCard
               name="UI Design"
               price="1200$"

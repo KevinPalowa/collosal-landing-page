@@ -2,8 +2,8 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <footer className="grid grid-cols-2 sm:grid-cols-4 gap-5">
-      <div className="hidden sm:block space-y-[21px]">
+    <footer className="grid grid-cols-2 gap-5 sm:grid-cols-4">
+      <div className="hidden space-y-[21px] sm:block">
         <div className="flex items-center space-x-[14px]">
           <svg
             width="30"
@@ -20,16 +20,16 @@ export const Footer = () => {
               stroke-linejoin="round"
             />
           </svg>
-          <h3 className="font-bold text-2xl">Collosal</h3>
+          <h3 className="text-2xl font-bold">Collosal</h3>
         </div>
-        <ul className="text-white/60 space-y-[10px]">
+        <ul className="space-y-[10px] text-white/60">
           <li>Copyright © 2021 </li>
           <li>Design By Collosal LLC</li>
         </ul>
       </div>
-      <div className="space-y-[14px] flex flex-col justify-start">
-        <h4 className="font-medium text-sm">SERVICES</h4>
-        <ul className="text-white/60 space-y-[10px]">
+      <div className="flex flex-col justify-start space-y-[14px]">
+        <h4 className="text-sm font-medium">SERVICES</h4>
+        <ul className="space-y-[10px] text-white/60">
           <li>Web Development</li>
           <li>App Development</li>
           <li>UI Design</li>
@@ -38,8 +38,8 @@ export const Footer = () => {
         </ul>
       </div>
       <div className="space-y-[14px]">
-        <h4 className="font-medium text-sm">COMPANY</h4>
-        <ul className="text-white/60 space-y-[10px]">
+        <h4 className="text-sm font-medium">COMPANY</h4>
+        <ul className="space-y-[10px] text-white/60">
           <li>About</li>
           <li>Contact</li>
           <li>Send Quote</li>
@@ -48,8 +48,8 @@ export const Footer = () => {
         </ul>
       </div>
       <div className="space-y-[14px] ">
-        <h4 className="font-medium text-sm">RESOURCES</h4>
-        <ul className="text-white/60 space-y-[10px]">
+        <h4 className="text-sm font-medium">RESOURCES</h4>
+        <ul className="space-y-[10px] text-white/60">
           <li>Support</li>
           <li>Documentation</li>
           <li>License</li>

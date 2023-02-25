@@ -18,12 +18,12 @@ export const PricingCard = (props: Props) => {
       <div className="flex justify-between">
         <h3 className="font-bold">{props.name}</h3>
         <div>
-          <span className="text-white/60 text-xs">Starting From</span>
+          <span className="text-xs text-white/60">Starting From</span>
           <h2 className="text-4xl font-bold">{props.price}</h2>
         </div>
       </div>
-      <hr className="border border-white/5 my-[2.3125rem]" />
-      <ul className="text-center font-medium space-y-[1.25rem] mb-[3.125rem]">
+      <hr className="my-[2.3125rem] border border-white/5" />
+      <ul className="mb-[3.125rem] space-y-[1.25rem] text-center font-medium">
         {props.features.map((feature, i) => (
           <li key={i}>{feature}</li>
         ))}

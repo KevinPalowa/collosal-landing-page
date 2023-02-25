@@ -17,7 +17,7 @@ export default function RootLayout({
       */}
       <head />
       <body
-        className="bg-[#0B0B22] text-white bg-three-circle bg-no-repeat"
+        className="bg-[#0B0B22] bg-three-circle bg-no-repeat text-white"
         style={notoSans.style}
       >
         {children}

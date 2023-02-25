@@ -5,9 +5,9 @@ type Props = { title: string; description: string; href?: string };
 export const ProjectCard = (props: Props) => {
   return (
     <div>
-      <div className="h-[25rem] bg-slate-900 rounded-[3px]" />
-      <div className="text-center mt-10">
-        <h3 className="font-bold text-xl">{props.title}</h3>
+      <div className="h-[25rem] rounded-[3px] bg-slate-900" />
+      <div className="mt-10 text-center">
+        <h3 className="text-xl font-bold">{props.title}</h3>
         <h3 className="mt-[0.625rem] text-white/60">{props.description}</h3>
         <Button
           style="outline"
