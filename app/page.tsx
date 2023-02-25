@@ -11,6 +11,8 @@ import { Section } from "@/components/Section";
 import useWindowSize from "@/hooks/useWindowSize";
 import { ProjectCard } from "@/components/ProjectCard";
 import { PricingCard } from "@/components/PricingCard";
+import { TestimonialCard } from "@/components/TestimonialCard";
+import { Callout } from "@/components/Callout";
 
 export default function Home() {
   const { width } = useWindowSize();
@@ -129,6 +131,34 @@ export default function Home() {
             />
           </div>
         </div>
+
+        <div>
+          <div className="w-full text-center sm:mx-auto sm:w-6/12">
+            <h3 className="font-semibold text-green">TESTIMONIAL</h3>
+            <h1 className="mt-1 mb-24 text-3xl font-bold leading-[48px]">
+              What do our clients say that we never let down?
+            </h1>
+          </div>
+          <div className="grid grid-cols-3 gap-8">
+            <TestimonialCard
+              name="Courtney Henry"
+              company="Biffco Enterprises Ltd."
+              text="Very easy to use. I made back the purchase price in just 48 hours! It's great. It's is both attractive and highly adaptable."
+            />
+            <TestimonialCard
+              className="-translate-y-8"
+              name="Esther Howard"
+              company="Abstergo Ltd."
+              text="Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."
+            />
+            <TestimonialCard
+              name="Ronald Richards"
+              company="Barone LLC."
+              text="I am really satisfied with it. I'm good to go. It really saves me time and effort. It's is exactly what our business has been lacking. "
+            />
+          </div>
+        </div>
+        <Callout />
         <Footer />
       </div>
     </main>
