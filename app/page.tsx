@@ -10,6 +10,7 @@ import { NavBar } from "@/components/NavBar";
 import { Section } from "@/components/Section";
 import useWindowSize from "@/hooks/useWindowSize";
 import { ProjectCard } from "@/components/ProjectCard";
+import { PricingCard } from "@/components/PricingCard";
 
 export default function Home() {
   const { width } = useWindowSize();
@@ -81,6 +82,50 @@ export default function Home() {
             <ProjectCard
               title="The Desktop App Landing Page"
               description="A landing page for desktop app"
+            />
+          </div>
+        </div>
+
+        <div className="bg-[#221048] rounded-[30px] py-[5.625rem] pb-[10.875rem]">
+          <div className="sm:w-6/12 w-full sm:mx-auto text-center">
+            <h3 className="text-green font-semibold">GET STARTED</h3>
+            <h1 className="font-bold text-3xl leading-[48px] mt-1 mb-7">
+              What do you need? Choose a service that can help you
+            </h1>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-5">
+            <PricingCard
+              name="UI Design"
+              price="1200$"
+              features={[
+                "10 design pages",
+                "Well-documented",
+                "4 Revisions",
+                "$100/additional page",
+              ]}
+              color="bg-[#3F2379]"
+            />
+            <PricingCard
+              name="Development"
+              price="5000$"
+              features={[
+                "Web & Mobile",
+                "Well-documented",
+                "8 Revisions",
+                "$1000/additional page",
+              ]}
+              color="bg-[#233679]"
+            />
+            <PricingCard
+              name="Maintenance"
+              price="3000$"
+              features={[
+                "Daily Backup",
+                "3 hourse of maintenance",
+                "Including fixing",
+                "$50/additional hour",
+              ]}
+              color="bg-[#792366]"
             />
           </div>
         </div>
