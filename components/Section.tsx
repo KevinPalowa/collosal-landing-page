@@ -6,6 +6,7 @@ type Props = {
   description: string;
   title: string;
   subtitle: string;
+  id?: string;
 };
 export const Section = ({
   reverse,
@@ -13,11 +14,12 @@ export const Section = ({
   subtitle,
   description,
   ilustration,
+  id,
 }: Props) => {
   return (
     <div
       className={`sm:flex sm:items-center ${reverse && "flex-row-reverse"}`}
-      id="work"
+      id={id}
     >
       <Image
         src={ilustration}
@@ -29,7 +31,7 @@ export const Section = ({
         <h1 className="mt-1 mb-7 text-3xl font-bold leading-[48px]">
           {subtitle}
         </h1>
-        <p className="font-medium text-white/60">{description}</p>
+        <p className="font-medium leading-8 text-white/60">{description}</p>
       </div>
     </div>
   );

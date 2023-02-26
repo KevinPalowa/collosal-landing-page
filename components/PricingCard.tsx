@@ -29,7 +29,7 @@ export const PricingCard = (props: Props) => {
         ))}
       </ul>
       <Button color="white" className="w-full">
-        Button
+        Detail
       </Button>
     </div>
   );

@@ -13,6 +13,8 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { PricingCard } from "@/components/PricingCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { Callout } from "@/components/Callout";
+import { Carousel } from "@/components/Carousel";
+/* import { Carousel } from "flowbite-react"; */
 
 export default function Home() {
   const { width } = useWindowSize();
@@ -39,16 +41,17 @@ export default function Home() {
             description="The project interface will be designed first, our favorite tool is Figma."
           />
           <FeatureCard
-            title="Design"
-            description="The project interface will be designed first, our favorite tool is Figma."
+            title="Develop"
+            description="Transform design and write business logic here. Choose the technology you want."
           />
           <FeatureCard
-            title="Design"
-            description="The project interface will be designed first, our favorite tool is Figma."
+            title="Ship"
+            description="After the work is complete, we will send the project and all its assets to you."
           />
         </div>
         <Logo />
         <Section
+          id="work"
           title="How We Work"
           subtitle="
           Everything is well planned, well designed and developed wholeheartedly
@@ -69,7 +72,7 @@ export default function Home() {
         Our team consists of many creative people. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results."
           ilustration={Section2}
         />
-        <div>
+        <div id="projects">
           <div className="w-full text-center sm:mx-auto sm:w-6/12">
             <h3 className="font-semibold text-green">PROJECTS</h3>
             <h1 className="mt-1 mb-7 text-3xl font-bold leading-[48px]">
@@ -132,21 +135,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <div className="w-full text-center sm:mx-auto sm:w-6/12">
             <h3 className="font-semibold text-green">TESTIMONIAL</h3>
             <h1 className="mt-1 mb-24 text-3xl font-bold leading-[48px]">
               What do our clients say that we never let down?
             </h1>
           </div>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             <TestimonialCard
               name="Courtney Henry"
               company="Biffco Enterprises Ltd."
               text="Very easy to use. I made back the purchase price in just 48 hours! It's great. It's is both attractive and highly adaptable."
             />
             <TestimonialCard
-              className="-translate-y-8"
+              className="sm:-translate-y-8"
               name="Esther Howard"
               company="Abstergo Ltd."
               text="Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."
@@ -157,7 +160,29 @@ export default function Home() {
               text="I am really satisfied with it. I'm good to go. It really saves me time and effort. It's is exactly what our business has been lacking. "
             />
           </div>
-        </div>
+          <div className="mt-[75px] flex justify-center space-x-2">
+            <button className="h-[10px] w-[10px] rounded-full bg-white/20" />
+            <button className="h-[10px] w-[10px] rounded-full bg-white" />
+            <button className="h-[10px] w-[10px] rounded-full bg-white/20" />
+          </div>
+        </div> */}
+        <Carousel>
+          <TestimonialCard
+            name="Courtney Henry"
+            company="Biffco Enterprises Ltd."
+            text="Very easy to use. I made back the purchase price in just 48 hours! It's great. It's is both attractive and highly adaptable."
+          />
+          <TestimonialCard
+            name="Esther Howard"
+            company="Abstergo Ltd."
+            text="Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."
+          />
+          <TestimonialCard
+            name="Ronald Richards"
+            company="Barone LLC."
+            text="I am really satisfied with it. I'm good to go. It really saves me time and effort. It's is exactly what our business has been lacking. "
+          />
+        </Carousel>
         <Callout />
         <Footer />
       </div>

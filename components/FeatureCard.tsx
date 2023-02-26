@@ -53,7 +53,7 @@ export const FeatureCard = ({ icon, title, description }: Props) => {
       </svg>
       <div className="mt-7">
         <p className="text-lg font-bold">{title}</p>
-        <p className="mt-2 text-base font-medium text-white/60">
+        <p className="mt-2 text-base font-medium leading-8 text-white/60">
           {description}
         </p>
       </div>
