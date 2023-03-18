@@ -31,8 +31,8 @@ function Button({
     style === "outline"
       ? `bg-transparent border-[1px] ${
           color === "primary"
-            ? "border-primary text-primary"
-            : "border-white text-white"
+            ? "border-primary text-primary hover:bg-primary"
+            : "border-white text-white hover:bg-white hover:text-black"
         }`
       : style === "light"
       ? `${
