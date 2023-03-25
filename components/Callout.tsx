@@ -5,7 +5,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 export const Callout = () => {
   const { width } = useWindowSize();
   return (
-    <div className="flex flex-col border-y border-y-white/10 py-[47px] text-center sm:flex-row sm:text-left">
+    <div className="container flex flex-col border-y border-y-white/10 py-[47px] text-center sm:flex-row sm:text-left">
       <h1 className="text-3xl font-bold leading-[48px] sm:w-7/12">
         We&apos;ve prepared everything, it&apos;s time for you to tell the
         problem

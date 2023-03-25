@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <footer className="grid grid-cols-2 gap-5 sm:grid-cols-4">
+    <footer className="container grid grid-cols-2 gap-5 sm:grid-cols-4">
       <div className="hidden space-y-[21px] sm:block">
         <div className="flex items-center space-x-[14px]">
           <svg

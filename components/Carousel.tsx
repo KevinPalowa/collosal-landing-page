@@ -31,7 +31,7 @@ export const Carousel: FC<CarouselProps> = ({ children, ...props }) => {
   }, [activeItem, items.length]);
   return (
     <div>
-      <div className="sm:flex sm:space-x-8">
+      <div className="justify-center sm:flex sm:space-x-8">
         {items.map((item, index) => (
           <div
             key={index}

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Button from "./Button";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Collosal } from "./logo/Collosal";
+import { backToTop } from "@/utils/helper";
+import classNames from "classnames";
 const NavLink = ({
   href,
   children,
@@ -11,32 +13,34 @@ const NavLink = ({
   children: React.ReactNode;
 }) => {
   return (
-    <Link href={href} className="hover:text-white/70">
+    <a href={href} className="hover:text-white/70">
       {children}
-    </Link>
+    </a>
   );
 };
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const links = [
+  const menuList = [
     { name: "Service", url: "#service" },
     { name: "How We Work", url: "#work" },
     { name: "Projects", url: "#projects" },
   ];
+  const linkClassName = classNames("sm:space-x-10 hidden sm:flex");
   return (
-    <div
-      className={`sticky top-0 z-10  flex w-full items-center justify-between py-[9px] text-white transition`}
+    <nav
+      className={`container sticky top-0 z-10  flex w-full items-center justify-between py-[9px] text-white transition`}
     >
       <Link
         className="flex items-center space-x-[17.25px] text-2xl font-bold"
         href="/"
+        onClick={backToTop}
       >
         <Collosal />
         <span>Collosal</span>
       </Link>
-      <ul className="hidden space-x-10 sm:flex">
-        {links.map((link, i) => (
+      <ul className={linkClassName}>
+        {menuList.map((link, i) => (
           <li key={i}>
             <NavLink href={link.url}>{link.name}</NavLink>
           </li>
@@ -53,6 +57,6 @@ export const NavBar = () => {
         className="cursor-pointer sm:hidden"
         onClick={() => setIsOpen((prev) => !prev)}
       />
-    </div>
+    </nav>
   );
 };

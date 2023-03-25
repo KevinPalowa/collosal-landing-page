@@ -18,7 +18,9 @@ export const Section = ({
 }: Props) => {
   return (
     <div
-      className={`sm:flex sm:items-center ${reverse && "flex-row-reverse"}`}
+      className={`container sm:flex sm:items-center ${
+        reverse && "flex-row-reverse"
+      }`}
       id={id}
     >
       <Image

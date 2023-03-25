@@ -7,6 +7,7 @@ module.exports = {
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    container: { center: true },
     extend: {
       backgroundImage: { "three-circle": "url(/assets/svg/threeCircles.svg)" },
       colors: {

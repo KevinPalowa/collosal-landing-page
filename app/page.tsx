@@ -19,8 +19,8 @@ import { Carousel } from "@/components/Carousel";
 export default function Home() {
   const { width } = useWindowSize();
   return (
-    <main className="min-h-screen scroll-smooth bg-[#0B0B22]/90 backdrop-blur-[87.5px]">
-      <div className="container relative mx-auto space-y-40 px-5 pt-[4%] pb-16 sm:px-10">
+    <main className="min-h-screen bg-[#0B0B22]/90 backdrop-blur-[87.5px]">
+      <div className="relative mx-auto space-y-40 px-5 pt-[4%] sm:px-[67px]">
         <NavBar />
         <Hero />
         <div className="flex justify-center space-x-6">
@@ -35,7 +35,7 @@ export default function Home() {
             Learn More
           </Button>
         </div>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+        <div className="container grid grid-cols-1 gap-5 sm:grid-cols-3">
           <FeatureCard
             title="Design"
             description="The project interface will be designed first, our favorite tool is Figma."
@@ -72,7 +72,7 @@ export default function Home() {
         Our team consists of many creative people. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results."
           ilustration={Section2}
         />
-        <div id="projects">
+        <div id="projects" className="container">
           <div className="w-full text-center sm:mx-auto sm:w-6/12">
             <h3 className="font-semibold text-green">PROJECTS</h3>
             <h1 className="mt-1 mb-7 text-3xl font-bold leading-[48px]">
@@ -91,47 +91,52 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="rounded-[30px] bg-[#221048] py-[5.625rem] pb-[10.875rem]">
-          <div className="w-full text-center sm:mx-auto sm:w-6/12">
-            <h3 className="font-semibold text-green">GET STARTED</h3>
-            <h1 className="mt-1 mb-7 text-3xl font-bold leading-[48px]">
-              What do you need? Choose a service that can help you
-            </h1>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-3">
-            <PricingCard
-              name="UI Design"
-              price="1200$"
-              features={[
-                "10 design pages",
-                "Well-documented",
-                "4 Revisions",
-                "$100/additional page",
-              ]}
-              color="bg-[#3F2379]"
-            />
-            <PricingCard
-              name="Development"
-              price="5000$"
-              features={[
-                "Web & Mobile",
-                "Well-documented",
-                "8 Revisions",
-                "$1000/additional page",
-              ]}
-              color="bg-[#233679]"
-            />
-            <PricingCard
-              name="Maintenance"
-              price="3000$"
-              features={[
-                "Daily Backup",
-                "3 hourse of maintenance",
-                "Including fixing",
-                "$50/additional hour",
-              ]}
-              color="bg-[#792366]"
-            />
+        <div
+          className="mx-auto rounded-[30px] bg-[#221048] py-[5.625rem] pb-[10.875rem]"
+          id="service"
+        >
+          <div className="container">
+            <div className="w-full text-center sm:mx-auto sm:w-6/12">
+              <h3 className="font-semibold text-green">GET STARTED</h3>
+              <h1 className="mt-1 mb-7 text-3xl font-bold leading-[48px]">
+                What do you need? Choose a service that can help you
+              </h1>
+            </div>
+            <div className="grid gap-5 sm:grid-cols-3">
+              <PricingCard
+                name="UI Design"
+                price="1200$"
+                features={[
+                  "10 design pages",
+                  "Well-documented",
+                  "4 Revisions",
+                  "$100/additional page",
+                ]}
+                color="bg-[#3F2379]"
+              />
+              <PricingCard
+                name="Development"
+                price="5000$"
+                features={[
+                  "Web & Mobile",
+                  "Well-documented",
+                  "8 Revisions",
+                  "$1000/additional page",
+                ]}
+                color="bg-[#233679]"
+              />
+              <PricingCard
+                name="Maintenance"
+                price="3000$"
+                features={[
+                  "Daily Backup",
+                  "3 hourse of maintenance",
+                  "Including fixing",
+                  "$50/additional hour",
+                ]}
+                color="bg-[#792366]"
+              />
+            </div>
           </div>
         </div>
 
